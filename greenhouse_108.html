@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>孔隙介質流實驗室開放資料</title>
+	<!-- Meta -->
+	<meta name="description" content="xxx"/>
+	<meta name="keywords" content="xxx"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<!-- CSS Script -->
+	<link rel="stylesheet" href="assets/css/main.css"/>
+	<!-- Main Script -->
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/references/jquery.min.js"></script>
+	<script src="assets/js/references/skel.min.js"></script>
+	<script src="assets/js/references/util.js"></script>
+	<script src="assets/js/references/main.js"></script>
+	<!-- p5.js Script -->
+	<script src="assets/js/references/p5.min.js"></script>
+	<script src="assets/js/addons/p5.dom.min.js"></script>
+	<script src="assets/js/addons/p5.sound.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="assets/js/sketch.js"></script>
+	<!-- Charts Script -->
+	<script src="assets/js/references/amcharts.js"></script>
+	<script src="assets/js/references/serial.js"></script>
+	<script src="assets/js/references/dataloader.min.js"></script>
+	<script src="assets/js/references/light.js"></script>
+	<script src="assets/js/graph_greenhouse_108.js"></script>
+</head>
+<body onload="load();">
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<a href="#" class="logo">孔隙介質流實驗室開放資料</a>
+			<nav id="nav">
+				<a href="./index.html">首頁</a>
+				<a href="./index.html">測站資料</a>
+			</nav>
+			<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+		</div>
+	</header>
+	<!-- Banner -->
+	<section id="banner" style="background-image: url(./images/greenhouse_108_banner.jpg);"></section>
+	<!-- Content -->
+	<section id="content" class="wrapper">
+		<div class="inner">
+			<header class="align-left">
+				<h1>108溫室測站資料</h1>
+			</header>
+			<div class="station content">
+				<h2>測站說明</h2>
+				<table class="hidden">
+					<tr>
+						<td><p>（此處可放溫室說明）（此處可放溫室說明）（此處可放溫室說明）</p></td>
+					</tr>
+				</table>
+				<img src="images/greenhouse_108_layout.jpg" alt="greenhouse_108_layout" height="80%" width="80%"/>
+			</div>
+			<div class="selection">
+				<hr>
+				<table class="hidden">
+					<col width="25%">
+					<col width="75%">
+					<tr>
+						<td><button type="button" class="button special big" onclick="showRealtime();">即時監測資料</button></td>
+						<td><button type="button" class="button special big" onclick="showHistory();">歷史監測資料</button></td>
+					</tr>
+				</table>
+			</div>
+			<div id="station_realtime" class="station realtime" style="display:none;">
+				<hr>
+				<h2>即時監測資料</h2>
+				<h3>綜合分布圖</h3>
+				<p>此分布圖乃參考至108溫室之配置圖，有顯示數字的方框表示具有埋設監測儀器之區域，其數值為即時土壤含水量百分比，將遊標移至方框可查看其詳細資訊。綠色的小方框表示並未埋設監測儀器之區域。</p>
+				<canvas id="realtime_data" width="1000" height="620"></canvas>
+				<hr>
+				<h3>資料介接</h3>
+				<div class="station realtime data">
+					<table class="alt">
+						<col width="15%">
+						<col width="85%">
+						<tr>
+							<td>資料描述</td>
+							<td>該資料為108溫室之即時監測資料，其中提供兩種介接資料格式：<br>一、CSV檔：其中VWC(N)欄位表示第N台儀器所測得之土壤體積含水量（m<sup>3</sup>/m<sup>3</sup>）；其中EC(N)欄位表示第N台儀器所測得之土壤電導度（dS/m）；其中Temp(N)欄位表示第N台儀器所測得之土壤溫度（°C）。其資料包含最新一筆至前三十天之監測數據。<br>二、JSON檔（Data物件內即為監測數據）：其中VWC(N)表示第N台儀器所測得之土壤體積含水量（m<sup>3</sup>/m<sup>3</sup>）；其中EC(N)表示第N台儀器所測得之土壤電導度（dS/m）；其中Temp(N)表示第N台儀器所測得之土壤溫度（°C）。其資料僅包含最新一筆之監測數據。<br>
+							註：若要下載完全的歷史資料請至「歷史監測資料」之「資料下載」區域。</td>
+						</tr>
+						<tr>
+							<td>提供單位</td>
+							<td>國立臺灣大學孔隙介質流實驗室</td>
+						</tr>
+						<tr>
+							<td>最後更新時間</td>
+							<td>2018/3/4 00:00:00（更新頻率：每日）</td>
+						</tr>
+						<tr>
+							<td>介接網址</td>
+							<td><a href="./datalog/greenhouse_108_graph.csv">CSV檔</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="./datalog/greenhouse_108_realtime.json">JSON檔</a></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id="station_history" class="station history" style="display:none;">
+				<hr>
+				<h2>歷史監測資料</h2>
+				<div class="station history VWM">
+					<h3>土壤體積含水量</h3>
+					<p>Volumetric water content.</p>
+					<div id="chart_VWC" style="width:80%; height:500px;"></div>
+				</div>
+				<div class="station history EC">
+					<hr>
+					<h3>土壤電導度</h3>
+					<p>Electrical conductivity.</p>
+					<div id="chart_EC" style="width:80%; height:500px;"></div>
+				</div>
+				<div class="station history Temp">
+					<hr>
+					<h3>土壤溫度</h3>
+					<p>Temperature.</p>
+					<div id="chart_Temp" style="width:80%; height:500px;"></div>
+				</div>
+				<div class="station history data">
+					<hr>
+					<h3>資料下載</h3>
+					<p>該資料為108溫室之歷史監測資料，可於下拉式清單選擇年分後點選右側「下載」以取得資料。其資料格式為.csv檔：其中Timestamp表示紀錄時間、Record表示該筆紀錄編號；其中VWC(N)欄位表示第N台儀器所測得之土壤體積含水量（m<sup>3</sup>/m<sup>3</sup>）；其中EC(N)欄位表示第N台儀器所測得之土壤電導度（dS/m）；其中Temp(N)欄位表示第N台儀器所測得之土壤溫度（°C）。</p>
+					<table class="hidden">
+					<col width="12%">
+					<col width="20%">
+					<col width="60%">
+					<tr>
+						<td><p style="font-size:120%;"><strong>請選擇年分：</strong></p></td>
+						<td>
+							<select name="station_history_data" id="station_history_data" style="width:250px;">
+							<option value="2018">2018</option>
+							<option value="2017">2017</option>
+							</select><br>
+						</td>
+						<td><button type="button" class="button default" onclick="downloadDatalog('greenhouse_108_history_');" style="font-size:16px;">下載</button></td>
+					</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<div class="copyright">
+				Copyright &copy; 孔隙介質流實驗室 | <a href="#"></a>Tel：xxx | <a href="#"></a>Fax：xxx | <a href="#">Email：xxx</a>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
