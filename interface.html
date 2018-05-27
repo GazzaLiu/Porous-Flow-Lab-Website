@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>孔隙介質流實驗室開放資料</title>
+	<!-- Meta -->
+	<meta name="description" content="xxx"/>
+	<meta name="keywords" content="xxx"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<!-- CSS Script -->
+	<link rel="stylesheet" href="assets/css/main.css"/>
+	<!-- Main Script -->
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/references/jquery.min.js"></script>
+	<script src="assets/js/references/skel.min.js"></script>
+	<script src="assets/js/references/util.js"></script>
+	<script src="assets/js/references/main.js"></script>
+	<!-- Charts Script -->
+	<script src="assets/js/references/amcharts.js"></script>
+	<script src="assets/js/references/serial.js"></script>
+	<script src="assets/js/references/dataloader.min.js"></script>
+	<script src="assets/js/references/light.js"></script>
+	<script src="assets/js/graph_interface.js"></script>
+	<style>
+	@font-face {
+		font-family: "Fluent_Calibri";
+		src: url(assets/fonts/Fluent_Calibri.ttf) format("truetype");
+	}
+	p {
+		margin: 0;
+		color: #000;
+		font-size: 32px;
+	}
+	p.small {
+		font-size: 20px;
+	}
+</style>
+</head>
+<body onload="load();">
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<a href="#" class="logo">孔隙介質流實驗室開放資料</a>
+			<nav id="nav">
+				<a href="./index.html">首頁</a>
+				<a href="./index.html">測站資料</a>
+			</nav>
+			<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+		</div>
+	</header>
+	<!-- Banner -->
+	<section id="banner" style="background-image: url(./images/greenhouse_108_banner.jpg);"></section>
+	<!-- Content -->
+	<section id="content" class="wrapper">
+		<div class="inner">
+			<header class="align-left">
+				<h1>綜合資料介面</h1>
+			</header>
+			<div id="weather" style="width:100%;height:250px;border-radius:25px;background-color:#EEEEEE;">
+				<div style="padding:6% 0;width:10%;height:100%;float:left;" align="center"><p>即時<br>天氣</p></div>
+				<div style="width:20%;height:100%;float:left;" align="center"><img src="./assets/svg/amcharts_weather_icons_1.0.0/animated/cloudy-day-1.svg" alt="weather" height="225px" width="225px"><div style="position:relative;bottom:70px;"><p>晴時多雲</p></div></div>
+				<div style="border:4px #FF7878 solid;padding:2% 0;width:30%;height:100%;border-radius:25px;float:left;" align="center"><div style="width:50%;height:100%;float:left;" align="center"><p style="color:#E95959;font-family:Fluent_Calibri;font-size:60px;">25.2</p><p>氣溫<br>（°C）</p></div><table><tr><td>歷史</td><td>29.2</td></tr><tr><td>三十分後</td><td>26.0</td></tr><tr><td>一小時後</td><td>26.2</td></tr><tr><td>兩小時後</td><td>26.5</td></tr></table></div>
+				<div style="border:4px #78BBFF solid;padding:2% 0;width:30%;height:100%;border-radius:25px;float:left;" align="center"><div style="width:50%;height:100%;float:left;" align="center"><p style="color:#45A8E6;font-family:Fluent_Calibri;font-size:60px;">12</p><p>降雨量<br>（mm/day）</p></div><table><tr><td>歷史</td><td>0</td></tr><tr><td>三十分後</td><td>12</td></tr><tr><td>一小時後</td><td>13</td></tr><tr><td>兩小時後</td><td>13</td></tr></table></div>
+				<div style="padding:6% 0;width:10%;height:100%;float:left;" align="center"><svg width="50%" height="50%"><circle cx="50%" cy="50%" r="8" fill="#0c0"><animate dur="1.5s" attributeName="r" values="8;12;8" keyTimes="0;.5;1" repeatCount="indefinite"/> </circle></svg><p>正常</p></div>
+			</div>
+			<div id="greenhouse_108" style="width:100%;height:250px;border-radius:25px;background-color:#EEEEEE;">
+				<div style="padding:6% 0;width:10%;height:100%;float:left;" align="center"><p>108<br>溫室</p></div>
+				<div id="chart_108_VWC" style="width:40%;height:100%;float:left;"></div>
+				<div id="chart_108_Temp" style="width:40%;height:100%;float:left;"></div>
+				<div style="padding:6% 0;width:10%;height:100%;float:left;" align="center"><p class="small">預測產量<br>（三個月後）<br>2.4 kg/m<sup>2</sup></p></div>
+			</div>
+			<div id="greenhouse_109" style="width:100%;height:250px;border-radius:25px;background-color:#EEEEEE;">
+				<div style="padding:6% 0;width:10%;height:100%;float:left;" align="center"><p>109<br>溫室</p></div>
+				<div id="chart_109_VWC" style="width:40%;height:100%;float:left;"></div>
+				<div id="chart_109_Temp" style="width:40%;height:100%;float:left;"></div>
+				<div style="padding:6% 0;width:10%;height:100%;float:left;" align="center"><p class="small">預測產量<br>（三個月後）<br>0.5 kg/m<sup>2</sup></p></div>
+			</div>
+		</div>
+	</section>
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<div class="copyright">
+				Copyright &copy; 孔隙介質流實驗室 | <a href="#"></a>Tel：xxx | <a href="#"></a>Fax：xxx | <a href="#">Email：xxx</a>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+"thirtyMin":
+{"Linear Regression":{"Error":10,"Data":[{"VWC":0.2,"Temp":20.0},{"VWC":0.267,"Temp":26.9},{"VWC":0.289,"Temp":26.7},{"VWC":0.243,"Temp":27.1},{"VWC":0.322,"Temp":26.9},{"VWC":0.301,"Temp":26.4},{"VWC":0.26,"Temp":27},{"VWC":0.281,"Temp":26.9},{"VWC":0.274,"Temp":26.5},{"VWC":0.228,"Temp":26},{"VWC":0.303,"Temp":26.6},{"VWC":0.266,"Temp":26.2}]},
+"SVR":{"Error":9,"Data":[{"VWC":0.2,"Temp":20.0},{"VWC":0.267,"Temp":26.9},{"VWC":0.289,"Temp":26.7},{"VWC":0.243,"Temp":27.1},{"VWC":0.322,"Temp":26.9},{"VWC":0.301,"Temp":26.4},{"VWC":0.26,"Temp":27},{"VWC":0.281,"Temp":26.9},{"VWC":0.274,"Temp":26.5},{"VWC":0.228,"Temp":26},{"VWC":0.303,"Temp":26.6},{"VWC":0.266,"Temp":26.2}]},
+"Multilayer Perceptron":{"Error":8,"Data":[{"VWC":0.2,"Temp":20.0},{"VWC":0.267,"Temp":26.9},{"VWC":0.289,"Temp":26.7},{"VWC":0.243,"Temp":27.1},{"VWC":0.322,"Temp":26.9},{"VWC":0.301,"Temp":26.4},{"VWC":0.26,"Temp":27},{"VWC":0.281,"Temp":26.9},{"VWC":0.274,"Temp":26.5},{"VWC":0.228,"Temp":26},{"VWC":0.303,"Temp":26.6},{"VWC":0.266,"Temp":26.2}]}},
+"oneHour":
+{"Linear Regression":{"Error":10,"Data":[{"VWC":0.2,"Temp":20.0},{"VWC":0.267,"Temp":26.9},{"VWC":0.289,"Temp":26.7},{"VWC":0.243,"Temp":27.1},{"VWC":0.322,"Temp":26.9},{"VWC":0.301,"Temp":26.4},{"VWC":0.26,"Temp":27},{"VWC":0.281,"Temp":26.9},{"VWC":0.274,"Temp":26.5},{"VWC":0.228,"Temp":26},{"VWC":0.303,"Temp":26.6},{"VWC":0.266,"Temp":26.2}]},
+"SVR":{"Error":10,"Data":[{"VWC":0.2,"Temp":20.0},{"VWC":0.267,"Temp":26.9},{"VWC":0.289,"Temp":26.7},{"VWC":0.243,"Temp":27.1},{"VWC":0.322,"Temp":26.9},{"VWC":0.301,"Temp":26.4},{"VWC":0.26,"Temp":27},{"VWC":0.281,"Temp":26.9},{"VWC":0.274,"Temp":26.5},{"VWC":0.228,"Temp":26},{"VWC":0.303,"Temp":26.6},{"VWC":0.266,"Temp":26.2}]},
+"Multilayer Perceptron":{"Error":10,"Data":[{"VWC":0.2,"Temp":20.0},{"VWC":0.267,"Temp":26.9},{"VWC":0.289,"Temp":26.7},{"VWC":0.243,"Temp":27.1},{"VWC":0.322,"Temp":26.9},{"VWC":0.301,"Temp":26.4},{"VWC":0.26,"Temp":27},{"VWC":0.281,"Temp":26.9},{"VWC":0.274,"Temp":26.5},{"VWC":0.228,"Temp":26},{"VWC":0.303,"Temp":26.6},{"VWC":0.266,"Temp":26.2}]}},
+"twoHour":
+{"Linear Regression":{"Error":10,"Data":[{"VWC":0.2,"Temp":20.0},{"VWC":0.267,"Temp":26.9},{"VWC":0.289,"Temp":26.7},{"VWC":0.243,"Temp":27.1},{"VWC":0.322,"Temp":26.9},{"VWC":0.301,"Temp":26.4},{"VWC":0.26,"Temp":27},{"VWC":0.281,"Temp":26.9},{"VWC":0.274,"Temp":26.5},{"VWC":0.228,"Temp":26},{"VWC":0.303,"Temp":26.6},{"VWC":0.266,"Temp":26.2}]},
+"SVR":{"Error":10,"Data":[{"VWC":0.2,"Temp":20.0},{"VWC":0.267,"Temp":26.9},{"VWC":0.289,"Temp":26.7},{"VWC":0.243,"Temp":27.1},{"VWC":0.322,"Temp":26.9},{"VWC":0.301,"Temp":26.4},{"VWC":0.26,"Temp":27},{"VWC":0.281,"Temp":26.9},{"VWC":0.274,"Temp":26.5},{"VWC":0.228,"Temp":26},{"VWC":0.303,"Temp":26.6},{"VWC":0.266,"Temp":26.2}]},
+"Multilayer Perceptron":{"Error":10,"Data":[{"VWC":0.2,"Temp":20.0},{"VWC":0.267,"Temp":26.9},{"VWC":0.289,"Temp":26.7},{"VWC":0.243,"Temp":27.1},{"VWC":0.322,"Temp":26.9},{"VWC":0.301,"Temp":26.4},{"VWC":0.26,"Temp":27},{"VWC":0.281,"Temp":26.9},{"VWC":0.274,"Temp":26.5},{"VWC":0.228,"Temp":26},{"VWC":0.303,"Temp":26.6},{"VWC":0.266,"Temp":26.2}]}},
+"crop":
+{}
+}
